@@ -1,0 +1,23 @@
+uuid: 9d4c6681-1cf8-4311-b0ec-e27601f8cd4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_app_purchase_link
+    - node.type.product_detail
+  module:
+    - link
+id: node.product_detail.field_app_purchase_link
+field_name: field_app_purchase_link
+entity_type: node
+bundle: product_detail
+label: 'App Purchase Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

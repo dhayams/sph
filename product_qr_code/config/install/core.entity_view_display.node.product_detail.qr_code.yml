@@ -1,0 +1,36 @@
+uuid: 524322c7-8ed0-4302-b580-eb4d1dcab16c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.qr_code
+    - field.field.node.product_detail.body
+    - field.field.node.product_detail.field_app_purchase_link
+    - field.field.node.product_detail.field_product_image
+    - field.field.node.product_detail.layout_builder__layout
+    - node.type.product_detail
+  module:
+    - product_qr_code
+    - user
+id: node.product_detail.qr_code
+targetEntityType: node
+bundle: product_detail
+mode: qr_code
+content:
+  field_app_purchase_link:
+    weight: 0
+    label: hidden
+    settings:
+      qr_width: '4'
+      qr_height: '4'
+      qr_color: Black
+      qr_title: ''
+      qr_help_text: ''
+    third_party_settings: {  }
+    type: link_qr
+    region: content
+hidden:
+  body: true
+  field_product_image: true
+  layout_builder__layout: true
+  links: true

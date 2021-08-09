@@ -1,0 +1,10 @@
+uuid: 4c59605a-6aae-4574-9c7c-a0a0b8b5d853
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.qr_code
+label: 'QR Code'
+targetEntityType: node
+cache: true

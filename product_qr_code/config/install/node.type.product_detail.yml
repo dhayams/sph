@@ -1,0 +1,18 @@
+uuid: 71c0b75f-cb28-4212-868b-e20738abcbfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Product Detail'
+type: product_detail
+description: 'Create Products for the website'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

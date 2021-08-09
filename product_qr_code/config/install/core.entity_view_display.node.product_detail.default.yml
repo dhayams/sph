@@ -1,0 +1,122 @@
+uuid: b2118d57-e758-473b-96cc-b01f92ea34de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_detail.body
+    - field.field.node.product_detail.field_app_purchase_link
+    - field.field.node.product_detail.field_product_image
+    - field.field.node.product_detail.layout_builder__layout
+    - node.type.product_detail
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          0ee2c475-527e-4f18-95a1-0e97548c9cda:
+            uuid: 0ee2c475-527e-4f18-95a1-0e97548c9cda
+            region: content
+            configuration:
+              id: 'field_block:node:product_detail:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: ''
+          column_widths: 33-34-33
+          context_mapping: {  }
+        components:
+          6e1d8994-a356-4d0d-8c88-f355468e0455:
+            uuid: 6e1d8994-a356-4d0d-8c88-f355468e0455
+            region: first
+            configuration:
+              id: 'field_block:node:product_detail:field_product_image'
+              label: 'Product Image'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: large
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          10b6f1a2-92be-4dc8-a92e-cf1aaeb740d0:
+            uuid: 10b6f1a2-92be-4dc8-a92e-cf1aaeb740d0
+            region: second
+            configuration:
+              id: 'field_block:node:product_detail:body'
+              label: 'Product Description'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.product_detail.default
+targetEntityType: node
+bundle: product_detail
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_app_purchase_link: true
+  layout_builder__layout: true

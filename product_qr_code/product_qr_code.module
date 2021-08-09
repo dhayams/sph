@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Defines QR Field Formatter for link fields.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function product_qr_code_theme() {
+  return [
+    'link_formatter_qr_code' => [
+      'variables' => ['qrcode' => NULL],
+    ],
+    'node__product_detail__qr_code' => [
+      'template' => 'node--product-detail--qr-code',
+      'base hook' => 'node',
+    ],
+  ];
+}
